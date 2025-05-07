@@ -14,7 +14,7 @@ To get started, simply run the following commands:
 ```bash
 git clone git@github.com:FrigadeHQ/remote-storage.git
 cd remote-storage/apps/remote-storage-server
-cp .env.example .env
+cp .envSqlite.example .env
 pnpm install
 pnpm start
 ```
@@ -31,7 +31,7 @@ To get started, simply run the following commands:
 ```bash
 git clone git@github.com:FrigadeHQ/remote-storage.git
 cd remote-storage/apps/remote-storage-server
-cp .env.example .env
+cp .envRedis.example .env
 docker-compose build
 docker-compose up
 ```

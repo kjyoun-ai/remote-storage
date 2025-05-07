@@ -8,6 +8,10 @@ export class SqliteService implements OnModuleInit, DataService {
   constructor() {}
 
   async onModuleInit() {
+    if (process.env.DATA_STORE !== 'sqlite') {
+      console.log('sqlite is not the selected data store. Skipping connection.')
+      return;
+    }
     try {
       this.db = new this.sqlite3.Database('./database.sqlite')
       await this.db.run(
